@@ -26,7 +26,7 @@ library(esc)
 library(gmodels)
 library(MASS)
 
-file_path <- system.file("extdata", "Relefant_pre3.sav", package = "RfuerMAFKpackage")
+file_path <- system.file("extdata", "Relefant_pre3.sav", package = "FoMeR")
 relefant <- read.spss(file_path, to.data.frame = T, use.value.labels = F)
 
 #relefant$Geb <- as.POSIXct(relefant$Geb, origin = "1582-10-14")
