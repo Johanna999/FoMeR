@@ -42,9 +42,17 @@ relefant <- read.spss(file_path, to.data.frame = T, use.value.labels = F)
 
 ## 1 Willkommen zum Kurs
 
-In diesem Kurs lernst du grundlegende Verfahren der Statistik und deren Umsetzung in R kennen.
+### Ablauf
+
+Du bearbeitest diesen Kurses vollkommen selbständig. Im Tutorium kannst du Fragen stellen und Unklarheiten klären.
+
+Links im Menü siehst du die einzelnen Kapitel und Unterkapitel. Jedes Unterkapitel entspricht einer Seite. Wenn du die Seite bearbeitet hast, klickst du unten auf "Next Topic". Du kannst auch im Menü links zischen den Seiten springen, z.B. wenn du eine frühere Lektion wiederholen willst.
+
+Dies ist ein interaktiver Kurs mit Übungen. Dein Fortschritt wird lokal in deinem Browser gespeichert. Wenn du den Kurs das nächste Mal öffnest, wird dir direkt die zu letzt bearbeitete Seite angezeigt. Du kannst einzelne Übungen oder den gesamten Kurs jederzeit neu beginnen, indem du auf "Start over" über der Übung (für diese Übung) oder ganz unten im Menü (für den ganzen Kurs) klickst.
 
 ### Aufbau
+
+In diesem Kurs lernst du grundlegende Verfahren der Statistik und deren Umsetzung in R kennen.
 
 Dieser Kurs gliedert sich in 9 Kapitel:
 
@@ -59,14 +67,6 @@ Dieser Kurs gliedert sich in 9 Kapitel:
 9.  Chi-Quadrat
 
 Wir empfehlen, die Kapitel entsprechend der aktuellen Semesterübersicht (Forschungsmethoden 1 und Fortgeschrittenes wissenschaftliches Arbeiten) zu bearbeiten.
-
-### Ablauf
-
-Du bearbeitest diesen Kurses vollkommen selbständig. Im Tutorium kannst du Fragen stellen und Unklarheiten klären.
-
-Links im Menü siehst du die einzelnen Kapitel und Unterkapitel. Jedes Unterkapitel entspricht einer Seite. Wenn du die Seite bearbeitet hast, klickst du unten auf "Next Topic". Du kannst auch im Menü links zischen den Seiten springen, z.B. wenn du eine frühere Lektion wiederholen willst.
-
-Dies ist ein interaktiver Kurs mit Übungen. Dein Fortschritt wird lokal in deinem Browser gespeichert. Wenn du den Kurs das nächste Mal öffnest, wird dir direkt die zu letzt bearbeitete Seite angezeigt. Du kannst einzelne Übungen oder den gesamten Kurs jederzeit neu beginnen, indem du auf "Start over" über der Übung (für diese Übung) oder ganz unten im Menü (für den ganzen Kurs) klickst.
 
 ## 1.1 Das Programm R
 
@@ -713,7 +713,7 @@ Nach dem Einlesen des Datensatz wird dieser rechts oben im Arbeitsumfeld (*Envir
 
 Wenn du den Datensatz erfolgreich eingelesen hast, kannst du in R Studio im Environment auf den Namen des Datensatzes klicken, dann wird er dir angezeigt.
 
-Im folgenden Abschnitt werden wir mit diesem Datensatz arbeiten. Du kannst dein Skript speichern und bei der nächsten Übung wieder verwenden, so musst du die Befehle zum Einlesen nicht erneut schreiben. Klicke dafür auf das blaue Diskettensymbol oben links im Skript und speichere das Dokument mit einem sinnvollen Namen an einem sinnvollen Ort ab.
+Im folgenden Abschnitt werden wir mit diesem Datensatz arbeiten. Du kannst dein Skript speichern und bei der nächsten Übung wieder verwenden, so musst du die Befehle zum Einlesen nicht erneut schreiben. Klicke dafür auf das blaue Diskettensymbol oben links im Skript und speichere das Dokument mit einem sinnvollen Namen an einem sinnvollen Ort ab. Beim Schliessen von R Öffnet sich ein Fenster "Save workspace image..."; wähle hier "Don't save".
 
 ```{r save, echo = FALSE, out.width = "80%", fig.align='center'}
 knitr::include_graphics("www/speichern.png")
