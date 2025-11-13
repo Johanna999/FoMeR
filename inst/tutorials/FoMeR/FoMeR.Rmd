@@ -1209,7 +1209,7 @@ Mit den Items *FSQ_SGL1* und *FSQ_SGL2* whaben die Spielgruppenleiterinnen die F
 Öffne das Skript aus den vorherigen Kapiteln in R Studio. Führe alle Befehle zum Einlesen des Datensatz aus (Das Installieren der Pakete ist nicht mehr notwendig, da sie bereits auf deinem Computer installiert sind).
 
 ```{r, eval=F, echo=T}
-# Bilde einen Teildatensatz von relefant mit allen Kindern der Gruppen 1 bis 5.
+# Bilde einen Teildatensatz von relefant mit allen Kindern der Gruppen (GID) 1 bis 5.
 
 # Berechne Mittelwert und Standardabweichung der Variable Geb für diese Kinder.
 
