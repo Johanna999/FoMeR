@@ -1015,7 +1015,7 @@ relefant_sub <- subset(relefant, select = c(Intervention, sex, Geb))
 str(relefant_sub)
 ```
 
-Wenn wir viele Spalten filtern wollen, kann es praktisch sein statt der einzelnen Spaltennamen ganze Bereiche anzugeben. Mit `Intervention:Dauer` können wir den Bereich von Variable Intervention bis Variable Dauer auswählen, mit `1:5` die Spaltennummern eins bis fünf.
+Wenn wir viele Spalten filtern wollen, kann es praktisch sein statt der einzelnen Spaltennamen ganze Bereiche anzugeben. Mit `Intervention:Dauer` können wir den Bereich von Variable Intervention bis Variable Dauer auswählen, mit `1:5` die Spaltennummern eins bis fünf. Der Doppelpunkt bedeutet also "bis" oder Bindestrich.
 
 Wähle die Spalten *KID* bis *Deutsch1* aus, einmal mit Variablennamen, einmal mit Spaltennummern:
 
@@ -1060,7 +1060,7 @@ Die Anzahl der Fälle im neuen Datensatz entspricht der Anzahl der Kinder in der
 
 ### Übung
 
-Erstelle einen Teildatensatz mit allen Kindern älter als 5 Jahre:
+Erstelle einen Teildatensatz mit allen Kindern älter als 4 Jahre:
 
 ```{r subrow2, exercise = T}
 
@@ -1068,11 +1068,11 @@ Erstelle einen Teildatensatz mit allen Kindern älter als 5 Jahre:
 
 <div>
 
-**Hint:** `relefant_kont <- subset(relefant, Geb > 5)`
+**Hint:** `relefant_kont <- subset(relefant, Geb > 4)`
 
 </div>
 
-Erstelle einen Teildatensatz mit allen Kindern, deren Alter nicht missing ist.
+Erstelle einen Teildatensatz mit allen Kindern, für die ein Alter angegeben wurde. D.h. entferne Kinder aus dem Datensatz, die statt einer Zahl "NA" haben.
 
 ```{r subrow3, exercise = T}
 
@@ -1080,7 +1080,7 @@ Erstelle einen Teildatensatz mit allen Kindern, deren Alter nicht missing ist.
 
 <div>
 
-**Hint:** `relefant_kont <- subset(relefant, Geb != NA)`
+**Hint:** `relefant_kont <- subset(relefant, Geb != "NA")`
 
 </div>
 
@@ -1226,7 +1226,7 @@ Dies ist eine mögliche Lösung.
 
 ```{r code2, echo=T}
 # Bilde einen Teildatensatz von relefant mit allen Kindern der Gruppen 1 bis 5.
-relefant_15 <- subset(relefant, GID == 1:5)
+relefant_15 <- subset(relefant, GID <= 5)
 
 # Berechne Mittelwert und Standardabweichung der Variable Geb für diese Kinder.
 mean(relefant_15$Geb, na.rm = T)
@@ -1253,7 +1253,7 @@ Hinweis: Es gibt verschiedene Möglichkeiten den Dataframe zu bilden. Wichtig is
 ```{r quizsubset, echo = F}
 quiz(
   question("Welchen Mittelwert hat die Variable Geb für die Kinder der Gruppen 1 bis 5?",
-    answer("4.18125", correct = T),
+    answer("4.0322432", correct = T),
     answer("5.829"),
     answer("4.7"),
     answer("3.23452"),
@@ -1262,22 +1262,22 @@ quiz(
   question("Welche Standardabweichung hat die Variable Geb für die Kinder der Gruppen 1 bis 5?",
     answer("1"),
     answer("0,5323344"),
-    answer("0.2112843", correct = T),
+    answer("0.2706105", correct = T),
     answer("0.1"),
   allow_retry = TRUE
   ),
   question("Wo liegt der Median für Variable Geb für die Kinder der Gruppen 1 bis 5 nach dem Boxplot?",
-    answer("Zwischen 4.1 und 4.2"),
-    answer("Bei 4.4"),
-    answer("Zwischen 4.2 und 4.3", correct = T),
+    answer("Bei ca. 3.4"),
+    answer("Bei ca. 4.4"),
+    answer("Bei ca. 4", correct = T),
     answer("Den Median kann ich im Boxplot nicht ablesen"),
   allow_retry = TRUE
   ),
   question("Wie verändern sich Mittelwert, Standardabweichung und das Boxplot durch die Umwandlung von Jahre in Monate?",
     answer("Der Mittelwert bleibt gliech."),
     answer("Der Mittelwert vergrössert sich um den Faktor 12", correct = T),
-    answer("Die Standardabweichung bleibt gliech", correct = T),
-    answer("Die Standardabewichungvergrössert sich um den Faktor 12"),
+    answer("Die Standardabweichung bleibt gliech"),
+    answer("Die Standardabewichungvergrössert sich um den Faktor 12", correct = T),
     answer("Das Boxplot bleibt gleich"),
     answer("Die y-Achse des Boxplots verschiebt sich", correct = T),
   allow_retry = TRUE
