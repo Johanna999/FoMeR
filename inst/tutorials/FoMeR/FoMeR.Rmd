@@ -1278,7 +1278,7 @@ quiz(
     answer("Der Mittelwert vergrössert sich um den Faktor 12", correct = T),
     answer("Die Standardabweichung bleibt gliech"),
     answer("Die Standardabewichungvergrössert sich um den Faktor 12", correct = T),
-    answer("Das Boxplot bleibt gleich"),
+    answer("Die Proportionen des Boxplot bleiben gleich", correct = T),
     answer("Die y-Achse des Boxplots verschiebt sich", correct = T),
   allow_retry = TRUE
   )
